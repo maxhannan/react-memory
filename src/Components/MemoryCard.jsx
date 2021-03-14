@@ -19,7 +19,8 @@ const memoryCardStyle = {
   height: '300px',
   minWidth: '280px',
   display: 'flex',
-  flexDirection: 'column'
+  flexDirection: 'column',
+  borderRadius: '20px'
 }
 const iconHolder = {
   display: 'flex',
