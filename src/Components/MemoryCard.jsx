@@ -1,13 +1,13 @@
 
 const MemoryCard = ({card, handleClick}) => {
   return ( 
-    <div style = {memoryCardStyle} id = {card.id} onClick = {(e) => handleClick(e)}>
-      <div id = {card.id}  className="iconHolder" style ={iconHolder}>
-        {card.icon}
-      </div>
-      <div id = {card.id}  className="textHolder" style ={textHolderStyle}>
-        {card.text}
-      </div>
+    <div 
+    className = 'memoryCard' 
+    style = {memoryCardStyle} 
+    id = {card.id} 
+    onClick = {(e) => handleClick(e)}
+    >
+      {card.icon}
     </div>
   );
 }
@@ -15,23 +15,17 @@ const MemoryCard = ({card, handleClick}) => {
 export default MemoryCard;
 
 const memoryCardStyle = {
-  border: '1px solid #ccc',
-  height: '300px',
-  minWidth: '280px',
-  display: 'flex',
+  cursor: 'pointer',
+
+  
   flexDirection: 'column',
-  borderRadius: '20px'
-}
-const iconHolder = {
+
+  transition: 'transform 250ms ease',
+  animation: 'expand 200ms linear',
   display: 'flex',
   alignItems:'center',
   justifyContent: 'center',
-  height: '75%',
-  fontSize: '100pt'
+  height: '100%',
+  color: 'white',
 }
-const textHolderStyle = {
-  display: 'flex',
-  alignItems:'center',
-  justifyContent: 'center',
-  fontSize: '20pt'
-}
+

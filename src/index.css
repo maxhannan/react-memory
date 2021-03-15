@@ -1,26 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;700&display=swap');
 body {
   margin: 0;
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  background-color: #1b1b1b;
 }
+
 .gridWrapper{
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 1em;
-  width: 90vw;
+  grid-template-columns: repeat(3, 1fr);
+  width: 60vw;
+  height: 75vh;
+
+}
+.memoryCard {
+  font-size: 100pt;
+}
+.memoryCard:hover{
+  transform: scale(1.04);
+}
+.resetBtn:hover {
+  transform: scale(1.04);
+}
+
+.scores {
+  display: flex;
+  width: 40vw;
+  justify-content: space-around;
+}
+
+@keyframes expand {
+  0%{
+    transform: rotateX(-180deg);
+
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
 }
 @media only screen and (max-width: 1200px) {
   .gridWrapper{
     grid-template-columns: repeat(3, 1fr);
+    width: 100vw;
   }
 }
 
 @media only screen and (max-width: 900px) {
   .gridWrapper{
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    height: 65vh;
   }
-}
-@media only screen and (max-width: 600px) {
-  .gridWrapper{
-    width: 300px;
-    grid-template-columns: repeat(1, 1fr);
+  .scores{
+    width: 95vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .memoryCard {
+    font-size: 60pt;
   }
 }
